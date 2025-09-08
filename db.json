@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "742",
+      "name": "Khomo",
+      "description": "E besitsoeng",
+      "category": "Nama",
+      "price": 50,
+      "quantity": 32
+    },
+    {
+      "id": "643",
+      "name": "Niki Naks",
+      "description": "Crunchy maize meal snack with cheese flavor",
+      "category": "Masimba",
+      "price": 1.5,
+      "quantity": 5
+    },
+    {
+      "id": "449",
+      "name": "Coca-Cola",
+      "description": "Classic Fizzy soft Drink",
+      "category": "Beverages",
+      "price": 22.98,
+      "quantity": 4
+    },
+    {
+      "id": "263",
+      "name": "Switch",
+      "description": "Flavoured Energy drink",
+      "category": "Beverages",
+      "price": 25.99,
+      "quantity": 7
+    },
+    {
+      "id": "540",
+      "name": "Papa",
+      "description": "Chai Mai meal mix",
+      "category": "Staple food",
+      "price": 19.99,
+      "quantity": 4
+    }
+  ]
+}

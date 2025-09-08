@@ -1,0 +1,305 @@
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #000;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right,#673AB7,#512DA8);
+            color: white;
+            margin: 0;
+            margin-bottom: 50px;
+            border-radius: 50px;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid white;
+        }
+
+
+        /* Navigation Styles */
+        nav {
+            background-color: #000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #512DA8;
+        }
+
+        
+       
+
+        /* Dashboard Styles */
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(to right,#673AB7,#512DA8);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(111, 66, 193, 0.15);
+        }
+
+        .stat-card h3 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .stat-card p {
+            font-size: 2rem;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Form Styles */
+        .product-form {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .product-form h2 {
+            margin-top: 0;
+            color: #495057;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .product-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .product-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .product-form input:focus {
+            outline: none;
+            border-color: #512DA8;
+            box-shadow: 0 0 0 2px rgba(111, 66, 193, 0.2);
+        }
+
+        .product-form button {
+            background: #512DA8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 10px;
+            
+        }
+
+        .product-form button:hover {
+            background: #5a32a3;
+        }
+
+        /* Product List Styles */
+        .product-list {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #e0e0e0;
+            
+        }
+        
+        .product-list h2{
+            color: #495057;
+        }
+        .product-list table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #000;
+        }
+
+        .product-list th,
+        .product-list td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-list th {
+            background-color: rgba(96, 0, 128, 0.058);
+            font-weight: 600;
+            color: #212529;
+        }
+
+        .product-list tr:hover {
+            background-color: #f5f7fa;
+        }
+
+        .Delete-Button, .Restock-Button, .Sell-Button {
+            padding: 8px 12px;
+            margin-right: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .Delete-Button {
+            background: red;
+            color: white;
+        }
+
+        .Delete-Button:hover {
+            background: #bd2130;
+        }
+
+        .Sell-Button {
+            background: #512DA8;
+            color: white;
+        }
+
+        .Sell-Button:hover {
+            background: #805bc6;
+        }
+
+        .Restock-Button {
+            background: green;
+            color: white;
+        }
+
+        .Restock-Button:hover {
+            background: #31703f;
+        }
+
+       /* Low stock warning */
+        .low-stock {
+            color: red;
+            font-weight: bolder;
+            animation: fade 2s infinite alternate;
+        }
+
+        @keyframes fade {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+
+       
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px;
+            }
+            
+            .dashboard-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-list {
+                overflow-x: auto;
+            }
+            
+            .app-container {
+                border-radius: 0;
+            }
+        }
+
+        /* Simple animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content {
+            animation: fadeIn 0.5s ease;
+        }
+
+        .stat-card {
+            animation: fadeIn 0.8s ease;
+        }
