@@ -89,7 +89,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="app-container">
-          <Navbar /> {/* Include the Navigation Bar */}
+          <Navbar /> 
           <h1>Wings Cafe Inventory System</h1>
           {/* Define our Routes */}
           <Routes>
