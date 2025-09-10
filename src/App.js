@@ -8,6 +8,7 @@ import ProductManager from './components/ProductManager';
 import Sales from './components/Sales';
 import Customers from './components/Customers';
 import Reports from './components/Reports';
+import Footer from './components/Footer';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -108,6 +109,7 @@ function App() {
           </Routes>
         </div>
       </div>
+      <Footer />
     </Router>
   );
 }
