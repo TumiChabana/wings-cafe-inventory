@@ -32,6 +32,22 @@ function Dashboard({ products }) {
           <p>{lowStockCount}</p>
         </div>
       </div>
+  
+
+      {/* Product Cards Section */}
+      <h3>Product Overview</h3>
+      <div className="product-cards">
+        {products.map(product => (
+          <div key={product.id} className="product-card">
+            <h4>{product.name}</h4>
+            <p>Category: {product.category}</p>
+            <p>Current Stock: <strong>{product.quantity}</strong></p>
+            <p>Price: <strong>M{product.price.toFixed(2)}</strong></p>
+            <p>Total Sold: <strong>{product.quantitySold || 0}</strong></p>
+            <p>Revenue: <strong>M{((product.quantitySold || 0) * product.price).toFixed(2)}</strong></p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

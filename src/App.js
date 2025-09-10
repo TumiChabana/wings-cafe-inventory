@@ -105,7 +105,7 @@ function App() {
             } />
             <Route path="/sales" element={<Sales />} />
             <Route path="/customers" element={<Customers />} />
-            <Route path="/reports" element={<Reports />} />
+            <Route path="/reports" element={<Reports products={products} />} />
           </Routes>
         </div>
       </div>

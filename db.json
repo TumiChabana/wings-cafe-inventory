@@ -6,7 +6,10 @@
       "description": "E besitsoeng",
       "category": "Nama",
       "price": 50,
-      "quantity": 32
+      "quantity": 26,
+      "cost":100,
+      "quantitySold":20
+
     },
     {
       "id": "643",
@@ -14,7 +17,9 @@
       "description": "Crunchy maize meal snack with cheese flavor",
       "category": "Masimba",
       "price": 1.5,
-      "quantity": 5
+      "quantity": 5,
+      "cost":100,
+      "quantitySold":20
     },
     {
       "id": "449",
@@ -22,7 +27,9 @@
       "description": "Classic Fizzy soft Drink",
       "category": "Beverages",
       "price": 22.98,
-      "quantity": 4
+      "quantity": 12,
+      "cost":100,
+      "quantitySold":20
     },
     {
       "id": "263",
@@ -30,7 +37,9 @@
       "description": "Flavoured Energy drink",
       "category": "Beverages",
       "price": 25.99,
-      "quantity": 7
+      "quantity": 7,
+      "cost":100,
+      "quantitySold":20
     },
     {
       "id": "540",
@@ -38,7 +47,9 @@
       "description": "Chai Mai meal mix",
       "category": "Staple food",
       "price": 19.99,
-      "quantity": 4
+      "quantity": 4,
+      "cost":100,
+      "quantitySold":20
     }
   ]
 }

@@ -34,6 +34,7 @@ function ProductForm({onAddProduct})
                 ...formData,
                 price:parseFloat(formData.price),
                 quantity:parseInt(formData.quantity),
+                cost:parseFloat(formData.cost),
                 id: Math.floor(Math.random() * 1000)//Generate ID
             };
 
@@ -45,7 +46,9 @@ function ProductForm({onAddProduct})
                 description:'',
                 category:'',
                 price:'',
-                quantity:''
+                quantity:'',
+                cost:'',
+                
 
             });
 
@@ -104,6 +107,16 @@ function ProductForm({onAddProduct})
                     type='number'
                     name='quantity'
                     value={formData.quantity}
+                    onChange={handleChange}
+                    required>
+                    </input>
+                </div>
+                <div>
+                    <label>Cost: </label>
+                    <input
+                    type='number'
+                    name='quantity'
+                    value={formData.cost}
                     onChange={handleChange}
                     required>
                     </input>

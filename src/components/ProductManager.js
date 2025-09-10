@@ -7,12 +7,13 @@ function ProductManager({ products, onAddProduct, onDeleteProduct, onUpdateQuant
 
   return (
     <div>
-      <ProductForm onAddProduct={onAddProduct} />
+      
       <ProductList
         products={products}
         onDeleteProduct={onDeleteProduct}
         onUpdateQuantity={onUpdateQuantity}
       />
+      <ProductForm onAddProduct={onAddProduct} />
     </div>
   );
 }
