@@ -11,6 +11,7 @@ function ProductList({ products, onDeleteProduct, onUpdateQuantity }) {
             <th>Category</th>
             <th>Price (M)</th>
             <th>Quantity</th>
+            <th>QuantitySold</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -22,6 +23,7 @@ function ProductList({ products, onDeleteProduct, onUpdateQuantity }) {
               <td>{product.category}</td>
               <td>M{product.price}</td>
               <td className={product.quantity < 5 ? 'low-stock' :'stock'}>{product.quantity}</td>
+              <td>{product.quantitySold || 0}</td>
               <td>
                 {/* Delete Button */}
                 <button className="Delete-Button" onClick={() => onDeleteProduct(product.id)}>Delete</button>

@@ -1,55 +1,388 @@
 {
   "products": [
     {
-      "id": "742",
-      "name": "Khomo",
-      "description": "E besitsoeng",
-      "category": "Nama",
-      "price": 50,
-      "quantity": 26,
-      "cost":100,
-      "quantitySold":20
-
-    },
-    {
-      "id": "643",
-      "name": "Niki Naks",
-      "description": "Crunchy maize meal snack with cheese flavor",
-      "category": "Masimba",
-      "price": 1.5,
-      "quantity": 5,
-      "cost":100,
-      "quantitySold":20
-    },
-    {
-      "id": "449",
-      "name": "Coca-Cola",
-      "description": "Classic Fizzy soft Drink",
+      "id": "318",
+      "name": "Coffee",
+      "description": "Latte with cream",
       "category": "Beverages",
-      "price": 22.98,
-      "quantity": 12,
-      "cost":100,
-      "quantitySold":20
+      "price": 20.99,
+      "quantity": 10,
+      "cost": 99.99,
+      "quantitySold": 46
     },
     {
-      "id": "263",
-      "name": "Switch",
-      "description": "Flavoured Energy drink",
+      "id": "803",
+      "name": "Coffee",
+      "description": "latte",
       "category": "Beverages",
       "price": 25.99,
-      "quantity": 7,
-      "cost":100,
-      "quantitySold":20
+      "quantity": 5,
+      "cost": 99.99,
+      "quantitySold": 1
     },
     {
-      "id": "540",
-      "name": "Papa",
-      "description": "Chai Mai meal mix",
-      "category": "Staple food",
-      "price": 19.99,
-      "quantity": 4,
-      "cost":100,
-      "quantitySold":20
+      "id": "771",
+      "name": "Coffee",
+      "description": "Latte with cream",
+      "category": "Beverages",
+      "price": 20.99,
+      "quantity": 10,
+      "cost": 99.99
+    },
+    {
+      "id": "88",
+      "name": "cake",
+      "description": "choco flavor",
+      "category": "Desert",
+      "price": 25.5,
+      "quantity": 5,
+      "cost": 200.45
+    }
+  ],
+  "sales": [
+    {
+      "id": "85de",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:46:03.746Z"
+    },
+    {
+      "id": "0009",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:52:05.152Z"
+    },
+    {
+      "id": "6c4c",
+      "productId": "803",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 25.99,
+      "date": "2025-09-11T07:52:06.900Z"
+    },
+    {
+      "id": "ee5f",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:51.573Z"
+    },
+    {
+      "id": "10f2",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:51.710Z"
+    },
+    {
+      "id": "3ee2",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:51.875Z"
+    },
+    {
+      "id": "9f95",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:52.036Z"
+    },
+    {
+      "id": "5782",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:52.182Z"
+    },
+    {
+      "id": "3903",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:52.355Z"
+    },
+    {
+      "id": "d0ed",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:52.482Z"
+    },
+    {
+      "id": "9fc6",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:52.649Z"
+    },
+    {
+      "id": "23f6",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:58:52.859Z"
+    },
+    {
+      "id": "fdfc",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:19.424Z"
+    },
+    {
+      "id": "3874",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:19.562Z"
+    },
+    {
+      "id": "9a2c",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:19.784Z"
+    },
+    {
+      "id": "cf69",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:20.114Z"
+    },
+    {
+      "id": "ac77",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:20.286Z"
+    },
+    {
+      "id": "1a85",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:20.439Z"
+    },
+    {
+      "id": "a277",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:20.595Z"
+    },
+    {
+      "id": "a952",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:20.766Z"
+    },
+    {
+      "id": "bad9",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:20.905Z"
+    },
+    {
+      "id": "5c06",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:21.064Z"
+    },
+    {
+      "id": "6356",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:21.232Z"
+    },
+    {
+      "id": "c42e",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:21.394Z"
+    },
+    {
+      "id": "9347",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:21.552Z"
+    },
+    {
+      "id": "6cc3",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:21.719Z"
+    },
+    {
+      "id": "1216",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:21.908Z"
+    },
+    {
+      "id": "ad62",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:22.391Z"
+    },
+    {
+      "id": "cc0a",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:22.662Z"
+    },
+    {
+      "id": "76dc",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:22.820Z"
+    },
+    {
+      "id": "e387",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:22.986Z"
+    },
+    {
+      "id": "921a",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:23.138Z"
+    },
+    {
+      "id": "e718",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:23.355Z"
+    },
+    {
+      "id": "403c",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:39.376Z"
+    },
+    {
+      "id": "f93e",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:39.567Z"
+    },
+    {
+      "id": "31ad",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:39.779Z"
+    },
+    {
+      "id": "424c",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:40.439Z"
+    },
+    {
+      "id": "8d75",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:40.651Z"
+    },
+    {
+      "id": "8cb3",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:42.968Z"
+    },
+    {
+      "id": "4d6e",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:43.161Z"
+    },
+    {
+      "id": "e271",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:43.373Z"
+    },
+    {
+      "id": "946b",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:43.575Z"
+    },
+    {
+      "id": "298f",
+      "productId": "318",
+      "productName": "Coffee",
+      "quantity": 1,
+      "totalAmount": 20.99,
+      "date": "2025-09-11T07:59:44.196Z"
     }
   ]
 }

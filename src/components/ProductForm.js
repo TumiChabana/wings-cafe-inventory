@@ -9,7 +9,8 @@ function ProductForm({onAddProduct})
         description:'',
         category:'',
         price: '',
-        quantity:''
+        quantity:'',
+        cost:''
     });
 
     const handleChange=(e)=>
@@ -35,6 +36,7 @@ function ProductForm({onAddProduct})
                 price:parseFloat(formData.price),
                 quantity:parseInt(formData.quantity),
                 cost:parseFloat(formData.cost),
+                quantitySold:0,
                 id: Math.floor(Math.random() * 1000)//Generate ID
             };
 
@@ -47,7 +49,7 @@ function ProductForm({onAddProduct})
                 category:'',
                 price:'',
                 quantity:'',
-                cost:'',
+                cost:''
                 
 
             });
@@ -112,10 +114,10 @@ function ProductForm({onAddProduct})
                     </input>
                 </div>
                 <div>
-                    <label>Cost: </label>
+                    <label>Cost(M): </label>
                     <input
                     type='number'
-                    name='quantity'
+                    name='cost'
                     value={formData.cost}
                     onChange={handleChange}
                     required>

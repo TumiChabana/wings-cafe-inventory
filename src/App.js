@@ -64,11 +64,18 @@ function App() {
     const productToUpdate = products.find(p => p.id === productId);
     const newQuantity = Math.max(0, productToUpdate.quantity + amount);
 
+    //Quantity sold update
+    const quantitySoldChange=amount<0? Math.abs(amount):0;
+    const newQuantitySold=Math.max(0, productToUpdate.quantitySold || 0) + quantitySoldChange;
+
     try {
       const response = await fetch(`http://localhost:3001/products/${productId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ quantity: newQuantity })
+        body: JSON.stringify({ 
+          quantity: newQuantity,
+          quantitySold: newQuantitySold 
+        })
       });
       const updatedProduct = await response.json();
 
@@ -77,6 +84,21 @@ function App() {
           product.id === productId ? updatedProduct : product
         )
       );
+
+      //Records sale if product was sold
+      if (amount<0){
+        await fetch('http://localhost:3001/sales', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          productId: productId,
+          productName: productToUpdate.name,
+          quantity: Math.abs(amount),
+          totalAmount: Math.abs(amount) * productToUpdate.price,
+          date: new Date().toISOString()
+        })
+      });
+      }
     } catch (err) {
       console.error("Error updating quantity:", err);
     }

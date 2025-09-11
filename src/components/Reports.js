@@ -7,14 +7,14 @@ function Reports({products}) {
     // Calculate profit for each product
     const calculatedProfitData = products.map(product => {
       const revenue = (product.quantitySold || 0) * product.price;
-      const costOfGoods = (product.quantitySold || 0) * product.cost;
+      const costOfGoods = (product.quantity || 0) * product.cost;
       const profit = revenue - costOfGoods;
       
       return {
         productName: product.name,
         quantitySold: product.quantitySold || 0,
         revenue: revenue,
-        cost: costOfGoods,
+        cost: totalCost,
         profit: profit
       };
     });
