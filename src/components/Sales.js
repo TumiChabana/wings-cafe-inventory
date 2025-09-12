@@ -22,7 +22,7 @@ function Sales() {
   const totalRevenue = sales.reduce((sum, sale) => sum + sale.totalAmount, 0);
 
   return (
-    <div className="card">
+    <div className="sales-card">
       <h2>Sales Module</h2>
       
       <div className="sales-summary">
@@ -31,9 +31,13 @@ function Sales() {
         <p>Total Transactions: <strong>{sales.length}</strong></p>
       </div>
 
-      <h3>Recent Transactions</h3>
+      
       <table className="sales-table">
+        
+
         <thead>
+          <h3>Recent Transactions</h3> 
+          <br></br>
           <tr>
             <th>Date</th>
             <th>Product</th>

@@ -7,8 +7,8 @@
       "category": "Beverage",
       "cost": 10,
       "price": 25,
-      "quantity": 0,
-      "quantitySold": 21
+      "quantity": 10,
+      "quantitySold": 23
     },
     {
       "id": "2",
@@ -26,9 +26,9 @@
       "id": "ee73",
       "productId": "1",
       "productName": "Coffee",
-      "quantity": 21,
-      "totalAmount": 525,
-      "date": "2025-09-12T07:19:39.955Z"
+      "quantity": 23,
+      "totalAmount": 575,
+      "date": "2025-09-12T13:00:55.345Z"
     },
     {
       "id": "5756",

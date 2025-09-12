@@ -48,8 +48,8 @@ function Reports({products}) {
   const totalInvestment = reportData.reduce((sum, item) => sum + item.totalCost, 0);
 
   return (
-    <div className="card">
-      <h2>Comprehensive Inventory & Profit Report</h2>
+    <div className="report-card">
+      <h2> Inventory & Profit Report</h2>
       
       <div className="report-summary">
         <div className="summary-card">
@@ -76,15 +76,17 @@ function Reports({products}) {
         </div>
       </div>
 
-      <h3>Detailed Product Analysis</h3>
-      <div className="table-responsive">
-        <table className="comprehensive-table">
+      
+      <div className="report-table-responsive">
+        
+        <table className="report-table">
           <thead>
+            <h3>Product Analysis</h3>
             <tr>
               <th rowSpan="2">Product</th>
-              <th colSpan="3">Quantity Analysis</th>
-              <th colSpan="2">Unit Pricing</th>
-              <th colSpan="4">Financial Analysis</th>
+              <th className="top" colSpan="3">Quantity Analysis</th>
+              <th className="top" colSpan="2">Unit Pricing</th>
+              <th className="top" colSpan="4">Financial Analysis</th>
               <th rowSpan="2">Profit Margin %</th>
             </tr>
             <tr>
