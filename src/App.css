@@ -229,6 +229,7 @@ nav ul li a:hover
     border-radius: 8px;
     overflow-x: auto;
     border: 1px solid #e0e0e0;
+    margin-bottom: 100px ;
     
 }
 
@@ -349,6 +350,7 @@ nav ul li a:hover
     
     .product-list {
         overflow-x: auto;
+        margin-bottom: 50px ;
     }
     
     .app-container {

@@ -86,22 +86,62 @@ function App() {
       );
 
       //Records sale if product was sold
-      if (amount<0){
-        await fetch('http://localhost:3001/sales', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          productId: productId,
-          productName: productToUpdate.name,
-          quantity: Math.abs(amount),
-          totalAmount: Math.abs(amount) * productToUpdate.price,
-          date: new Date().toISOString()
-        })
-      });
+      // FIXED: Records sale with consolidation for same day
+      if (amount < 0) {
+        await handleSaleRecord(productId, productToUpdate.name, Math.abs(amount), productToUpdate.price);
       }
     } catch (err) {
       console.error("Error updating quantity:", err);
     }
+  };
+
+  // NEW FUNCTION: Handle sale recording with same-day consolidation
+  const handleSaleRecord = async (productId, productName, quantitySold, unitPrice) => {
+    try {
+      // Get today's date in YYYY-MM-DD format
+      const today = new Date().toISOString().split('T')[0];
+      
+      // Check if there's already a sale for this product today
+      const existingSalesResponse = await fetch(`http://localhost:3001/sales?productId=${productId}`);
+      const existingSales = await existingSalesResponse.json();
+      
+      // Find if there's a sale for today
+      const todaySale = existingSales.find(sale => 
+        sale.date.split('T')[0] === today
+      );
+
+      if (todaySale) {
+        // UPDATE existing sale record
+        const updatedSale = {
+          ...todaySale,
+          quantity: todaySale.quantity + quantitySold,
+          totalAmount: (todaySale.quantity + quantitySold) * unitPrice,
+          date: new Date().toISOString() // Update timestamp
+        };
+
+        await fetch(`http://localhost:3001/sales/${todaySale.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updatedSale)
+        });
+      } else {
+        // CREATE new sale record
+        await fetch('http://localhost:3001/sales', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            productId: productId,
+            productName: productName,
+            quantity: quantitySold,
+            totalAmount: quantitySold * unitPrice,
+            date: new Date().toISOString()
+          })
+        });
+      }
+    } catch (err) {
+      console.error("Error recording sale:", err);
+    }
+
   };
 
   // 3. HANDLE LOADING AND ERROR STATES IN UI

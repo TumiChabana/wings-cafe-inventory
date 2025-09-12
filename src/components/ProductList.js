@@ -9,6 +9,7 @@ function ProductList({ products, onDeleteProduct, onUpdateQuantity }) {
             <th>Name</th>
             <th>Description</th>
             <th>Category</th>
+            <th>Cost Per Unit (M)</th>
             <th>Price (M)</th>
             <th>Quantity</th>
             <th>QuantitySold</th>
@@ -21,6 +22,7 @@ function ProductList({ products, onDeleteProduct, onUpdateQuantity }) {
               <td>{product.name}</td>
               <td>{product.description}</td>
               <td>{product.category}</td>
+              <td>M{product.cost ? product.cost.toFixed(2) : '0.00'}</td>
               <td>M{product.price}</td>
               <td className={product.quantity < 5 ? 'low-stock' :'stock'}>{product.quantity}</td>
               <td>{product.quantitySold || 0}</td>
