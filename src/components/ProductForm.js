@@ -10,7 +10,8 @@ function ProductForm({onAddProduct})
         category:'',
         price: '',
         quantity:'',
-        cost:''
+        cost:'',
+        image: ''
     });
 
     const handleChange=(e)=>
@@ -49,7 +50,8 @@ function ProductForm({onAddProduct})
                 category:'',
                 price:'',
                 quantity:'',
-                cost:''
+                cost:'',
+                image:''
                 
 
             });
@@ -123,6 +125,35 @@ function ProductForm({onAddProduct})
                     required>
                     </input>
                 </div>
+                
+                                
+                {/* NEW IMAGE INPUT */}
+                <div>
+                    <label>Image URL (Optional): </label>
+                    <input
+                    type='url'
+                    name='image'
+                    value={formData.image}
+                    onChange={handleChange}
+                    placeholder='https://example.com/product-image.jpg'>
+                    </input>
+                    {formData.image && (
+                        <div className="image-preview">
+                            <img 
+                                src={formData.image} 
+                                alt="Preview" 
+                                onError={(e) => {
+                                    e.target.style.display = 'none';
+                                    e.target.nextSibling.style.display = 'block';
+                                }}
+                            />
+                            <p style={{display: 'none', color: 'red'}}>
+                                Invalid image URL
+                            </p>
+                        </div>
+                    )}
+                </div>
+
                 <button type='submit'>Add Product</button>
                 </form>
             </div>

@@ -24,8 +24,8 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Contact Info</h4>
             <p> Maseru, Lesotho</p>
-            <p>+266 XXXX XXXX</p>
-            <p>✉️ info@wingscafe.ls</p>
+            <p>+266 2323 4545</p>
+            <p>info@wingscafe.ls</p>
           </div>
           
           <div className="footer-section">

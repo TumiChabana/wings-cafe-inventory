@@ -39,13 +39,19 @@ function Dashboard({ products }) {
       <div className="product-cards">
         {products.map(product => (
           <div key={product.id} className="product-card">
+            {/* Add product image if available */}
+            {product.image && (
+              <div className="product-image-container">
+                <img src={product.image} alt={product.name} className="product-image" />
+              </div>
+            )}
             <h4>{product.name}</h4>
             <img></img>
             <p>Category: {product.category}</p>
-            <p>Current Stock: <strong>{product.quantity}</strong></p>
+            <p>Current Stock: <strong className={product.quantity < 5 ? 'low-stock' :'stock'}>{product.quantity}</strong></p>
             <p>Price: <strong>M{product.price.toFixed(2)}</strong></p>
             <p>Total Sold: <strong>{product.quantitySold || 0}</strong></p>
-            <p>Revenue: <strong>M{((product.quantitySold || 0) * product.price).toFixed(2)}</strong></p>
+            
           </div>
         ))}
       </div>

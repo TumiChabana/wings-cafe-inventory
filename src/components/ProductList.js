@@ -38,10 +38,7 @@ function ProductList({ products, onDeleteProduct, onUpdateQuantity }) {
                 
                 
               </td>
-              {/* Add conditional styling for low stock(Use CSS classes instead)
-              <td className={product.quantity < 5 ? 'low-stock' : ''}>
-              {product.quantity}
-              </td> */}
+              
               
             </tr>
           ))}
