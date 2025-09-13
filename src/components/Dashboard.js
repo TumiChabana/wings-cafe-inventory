@@ -46,7 +46,7 @@ function Dashboard({ products }) {
               </div>
             )}
             <h4>{product.name}</h4>
-            <img></img>
+            
             <p>Category: {product.category}</p>
             <p>Current Stock: <strong className={product.quantity < 5 ? 'low-stock' :'stock'}>{product.quantity}</strong></p>
             <p>Price: <strong>M{product.price.toFixed(2)}</strong></p>
