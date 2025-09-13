@@ -7,7 +7,7 @@ function Sales() {
   useEffect(() => {
     const fetchSales = async () => {
       try {
-        const response = await fetch('http://localhost:3001/sales');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/sales`);
         const salesData = await response.json();
         setSales(salesData);
       } catch (error) {
