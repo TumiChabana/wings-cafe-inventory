@@ -22,7 +22,8 @@ function App() {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:3001/products');
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/products`);
+      
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
@@ -39,7 +40,7 @@ function App() {
   // 2. UPDATE FUNCTIONS TO USE THE API
   const handleAddProduct = async (newProduct) => {
     try {
-      const response = await fetch('http://localhost:3001/products', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/products`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newProduct)
@@ -53,7 +54,7 @@ function App() {
 
   const handleDeleteProduct = async (productId) => {
     try {
-      await fetch(`http://localhost:3001/products/${productId}`, { method: 'DELETE' });
+      await fetch(`${process.env.REACT_APP_API_URL}/products/${productId}`, { method: 'DELETE' });
       setProducts(prevProducts => prevProducts.filter(product => product.id !== productId));
     } catch (err) {
       console.error("Error deleting product:", err);
@@ -69,7 +70,7 @@ function App() {
     const newQuantitySold=Math.max(0, productToUpdate.quantitySold || 0) + quantitySoldChange;
 
     try {
-      const response = await fetch(`http://localhost:3001/products/${productId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/products/${productId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -102,7 +103,7 @@ function App() {
       const today = new Date().toISOString().split('T')[0];
       
       // Check if there's already a sale for this product today
-      const existingSalesResponse = await fetch(`http://localhost:3001/sales?productId=${productId}`);
+      const existingSalesResponse = await fetch(`${process.env.REACT_APP_API_URL}/sales?productId=${productId}`);
       const existingSales = await existingSalesResponse.json();
       
       // Find if there's a sale for today
@@ -119,14 +120,14 @@ function App() {
           date: new Date().toISOString() // Update timestamp
         };
 
-        await fetch(`http://localhost:3001/sales/${todaySale.id}`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/sales/${todaySale.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(updatedSale)
         });
       } else {
         // CREATE new sale record
-        await fetch('http://localhost:3001/sales', {
+        await fetch(`${process.env.REACT_APP_API_URL}/sales`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

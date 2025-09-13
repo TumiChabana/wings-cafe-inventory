@@ -15,6 +15,6 @@ server.use(cors({
 server.use(middlewares);
 server.use(router);
 
-server.listen(port, () => {
+server.listen(port,'127.0.0.1', () => {
   console.log(`JSON Server is running on port ${port}`);
 });
