@@ -7,7 +7,7 @@ const port = process.env.PORT || 3001;
 
 // Enhanced CORS configuration
 server.use(cors({
-  origin: ['http://localhost:3000', 'https://wings-cafe-backend-8qjs.onrender.com'],
+  origin: ['http://localhost:3000', 'https://tumichabana.github.io'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
