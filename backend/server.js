@@ -5,7 +5,13 @@ const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3001;
 
-server.use(cors());
+// Enhanced CORS configuration
+server.use(cors({
+  origin: ['http://localhost:3000', 'https://wings-cafe-backend-8qjs.onrender.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 server.use(middlewares);
 server.use(router);
 
