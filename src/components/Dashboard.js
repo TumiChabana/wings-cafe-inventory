@@ -42,7 +42,7 @@ function Dashboard({ products }) {
             {/* Add product image if available */}
             {product.image && (
               <div className="product-image-container">
-                <img src={product.image} alt={product.name} className="product-image" />
+                <img src={product.image} alt="Product" className="product-image" />
               </div>
             )}
             <h4>{product.name}</h4>
